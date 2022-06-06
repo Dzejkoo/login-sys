@@ -1,0 +1,30 @@
+{
+ "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "react/prop-types": 0,
+    "no-unused-vars": 0, 
+    "no-return-await": 0,
+    "no-useless-catch": 0,
+    "prettier/prettier": [
+      "warn",
+      {
+        "singleQuote": true,
+        "prettier.useTabs": true,
+        "endOfLine": "auto", 
+        "printWidth": 150
+      }
+    ]
+  },
+  "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 10
+    },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  }
+}
