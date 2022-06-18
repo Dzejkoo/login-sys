@@ -9,15 +9,17 @@ export default function Login() {
   const { login } = useAuth();
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  console.log(error);
+  const navigate = useNavigate();
 
   async function handleSubmit(e) {
     e.preventDefault();
-
+    console.log('Login');
     try {
       setError('');
       setLoading(true);
       await login(emailRef.current.value, passwordRef.current.value);
+      navigate('/');
+      console.log('Login succes');
     } catch {
       setError('Failed to sign in');
     }
