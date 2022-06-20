@@ -44,6 +44,9 @@ export default function Login() {
         </button>
       </Wrapper>
       <div>
+        <div>
+          <Link to="/forgot-password"> Forgot Password?</Link>
+        </div>
         Need an accound? <Link to="/signup">Sign Up</Link>
       </div>
     </>
